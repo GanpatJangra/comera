@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createStore } from "vuex";
 
-const url = "http://localhost:3000/products/";
+const url = "https://lacy-steady-mousepad.glitch.me/products/";
 
 export default createStore({
 
@@ -12,13 +12,15 @@ export default createStore({
     products: [],
     cart: '0',
     product: null,
-    checkout:null
+    // checkout:null
   },
 
   // getters
 
 
-  getters: {},
+  getters: {
+
+  },
 
   // mutations
 
@@ -55,18 +57,19 @@ export default createStore({
         commit("SET_PRODUCTS", response.data);
       });
     },
-
     getProduct: ({ commit }, productId) => {
-      axios.get(`http://localhost:3000/products/${productId}`).then((response) => {
+      axios.get(`https://lacy-steady-mousepad.glitch.me/products/${productId}`).then((response) => {
         commit("SET_PRODUCT", response.data);
       })
     },
 
-    checkOut: ({ commit }, checkoutId) => {
-      axios.get(`http://localhost:3000/products/${checkoutId}`).then((response) => {
-        commit("SET_CHECKOUT", response.data)
-      })
-    }
+
+
+    // checkout: ({ commit }, productId) => {
+    //   axios.get(`http://localhost:3000/products/${productId}`).then((response) => {
+    //     commit("SET_CHECKOUT", response.data)
+    //   })
+    // }
 
     // addProductToCart: ({ commit }, { product, quantity }) => {
     //   commit('ADD_TO_CART', { product, quantity });

@@ -13,7 +13,7 @@
                 class="px-2 py-1 text-xs font-bold text-red-500  border-2 border-red-500 rounded-full font-heading"
                 >-15%</span
               >
-              <a class="block px-6 mt-6 mb-2" href="#">
+              <a class="block px-6 mt-6 mb-2" >
                 <img class="object-contain w-full h-56 mx-auto mb-5" :src="product.image" alt="" />
                 <h3 class="mb-2 text-xl font-bold font-heading">
                   {{ product.name }}
@@ -23,8 +23,7 @@
                   <span class="text-xs font-semibold text-gray-500 line-through ml-2 font-heading">$33.69</span>
                 </p>
               </a>
-                  </router-link>
-              <a @click="addToCart()"
+              <a
                 class="flex items-center justify-center w-12 h-12 ml-auto mr-2 border rounded-lg hover:border-gray-500"
                
               >
@@ -33,6 +32,8 @@
                   <rect x="12" y="5" width="2" height="12" transform="rotate(90 12 5)" fill="#161616"></rect>
                 </svg>
               </a>
+                  </router-link>
+
           </div>
         </div>
       </div>
@@ -50,14 +51,14 @@ export default {
   components:{
 SliderBar
   },
-  methods: {
-    // addToCart(){
-    //   this.$store.dispatch('addProductToCart',{
-    //     product: this.product,
-    //     quantity: 1
-    //   })
-    // }
-  },
+  // methods: {
+  //   addToCart(){
+  //     this.$store.dispatch('addProductToCart',{
+  //       product: this.product,
+  //       quantity: 1
+  //     })
+  //   }
+  // },
 
   mounted() {
     this.$store.dispatch("getProducts");
