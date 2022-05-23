@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createStore } from "vuex";
 
-const url = "https://lacy-steady-mousepad.glitch.me/products/";
+const url = "https://kindly-opposite-wishbone.glitch.me/products/";
 
 export default createStore({
 
@@ -58,7 +58,7 @@ export default createStore({
       });
     },
     getProduct: ({ commit }, productId) => {
-      axios.get(`https://lacy-steady-mousepad.glitch.me/products/${productId}`).then((response) => {
+      axios.get(`https://kindly-opposite-wishbone.glitch.me/products/${productId}`).then((response) => {
         commit("SET_PRODUCT", response.data);
       })
     },
