@@ -18,5 +18,3 @@ export default {
   name: "thank You",
 };
 </script>
-
-<style scoped></style>

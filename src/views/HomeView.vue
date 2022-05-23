@@ -42,7 +42,6 @@
 </template>
 
 <script>
-// import mapState from "vuex";
 
 import SliderBar from "../components/SliderBar.vue"
 

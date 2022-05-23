@@ -187,7 +187,7 @@
             <div class="flex flex-wrap -mx-4 mb-14 items-center">
               <!-- buy now  -->
               <router-link
-                :to="{ name: 'checkout', params: { id: product.id } }"
+                :to="{ name: 'checkout', params: { id: product.id }}"
                 class="w-full p-6">
                 <div class="w-full xl:w-2/3 px-4 mb-4 xl:mb-0 curser-">
                   <a
@@ -316,7 +316,7 @@ data() {
  
     mounted() {
       this.$store.dispatch("getProduct", this.id);
-      this.$store.dispatch("checkout",this.id);
+      // this.$store.dispatch("checkout",this.id);
      
     },
   computed:{

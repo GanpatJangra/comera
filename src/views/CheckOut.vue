@@ -284,7 +284,7 @@
                   >
                 </div>
                 <router-link
-                  to="/"
+                  to="/thankyou"
                   @click.prevent="submitform()"
                   class="block w-full py-4 bg-orange-500 hover:bg-orange-400 text-center text-white font-bold font-heading uppercase rounded-md transition duration-200"
                   >Go to Checkout</router-link

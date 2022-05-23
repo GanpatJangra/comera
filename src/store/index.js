@@ -34,9 +34,9 @@ export default createStore({
       state.product = product;
     },
 
-    SET_CHECKOUT: (state, checkout) => {
-      state.checkout = checkout;
-    },
+    // SET_CHECKOUT: (state, checkout) => {
+    //   state.checkout = checkout;
+    // },
 
 
     // ADD_TO_CART:(state, {product, quantity}) => {
@@ -52,16 +52,30 @@ export default createStore({
 
 
   actions: {
-    getProducts: ({ commit }) => {
-      axios.get(url).then((response) => {
+    getProducts: async ({ commit }) => {
+     await axios.get(url).then((response) => {
         commit("SET_PRODUCTS", response.data);
       });
     },
-    getProduct: ({ commit }, productId) => {
-      axios.get(`https://kindly-opposite-wishbone.glitch.me/products/${productId}`).then((response) => {
+    getProduct: async ({ commit }, productId) => {
+    await  axios.get(`https://kindly-opposite-wishbone.glitch.me/products/${productId}`).then((response) => {
         commit("SET_PRODUCT", response.data);
       })
     },
+
+
+    savaUser: async ({ commit }, register) => {
+    await  axios.post('https://kindly-opposite-wishbone.glitch.me/users/',{
+        register
+      }).then((response) => {
+        commit("SET_PRODUCT", response.data);
+      })
+    },
+
+
+  
+
+
 
 
 
