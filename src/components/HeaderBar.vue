@@ -4,7 +4,7 @@
     <section class="relative">
       <nav class="flex justify-between border-b">
       
-        <div class="px-12 py-4 flex w-full items-center">
+        <div class="px-2 md:px-12 py-4 flex w-full items-center">
           <a class="flex-shrink-0 text-3xl font-bold font-heading" href="/">
             <img class="h-10 w-full" src="../assets/image/logo/ComEra.png" alt="" width="auto" />
           </a>
@@ -74,7 +74,7 @@
           <span class="inline-block w-6 h-6 text-center bg-gray-100 rounded-full font-semibold font-heading">
             {{ cart }}</span>
         </a>
-         <a @click="toggle()" class="xl:hidden flex items-center px-12 border-r" >
+         <a @click="toggle()" class="xl:hidden flex items-center xl:px-12 pr-5" >
       <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 15.4688H0V17.7207H18V15.4688Z" fill="black"></path>
         <path d="M11.0226 7.87402H0V10.126H11.0226V7.87402Z" fill="black"></path>
@@ -177,5 +177,15 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: var(--swiper-navigation-size);
+    text-transform: none!important;
+    letter-spacing: 0;
+    color: yellow;
+    /* background-color: red; */
+    font-variant: initial;
+    line-height: 1;
+}
 </style>

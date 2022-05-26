@@ -3,16 +3,16 @@
     <swiper-slide v-for="image in images" :key="image">
       <div>
         <img
-          class="h-[40rem] w-full lg:px-[10rem] relative"
+          class="xl:h-[40rem] xl:w-full lg:px-[10rem] relative"
           :src="image"
           alt="" />
 
         <h1
-          class="absolute top-[5%] right-[15%] text-[2rem] uppercase font-semibold">
+          class="absolute top-[5%] right-[15%] xl:text-[2rem] uppercase font-semibold">
           nike air 20 gold
         </h1>
         <button
-          class="absolute bottom-[20%] right-[15%] bg-black py-5 px-10 rounded-full text-white font-bold text-2xl uppercase">
+          class="absolute bottom-[5%] xl:bottom-[20%] right-[15%] bg-black xl:py-5 px-2 py-2 xl:px-10 rounded-full text-white font-bold xl:text-2xl uppercase">
           buy now
         </button>
       </div>
@@ -38,8 +38,8 @@ export default {
       images: [
         "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/2.png",
         "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/4.png",
-        "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/6.png",
-        "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/8.png",
+        // "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/6.png",
+        // "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/8.png",
         "https://raw.githubusercontent.com/luisDanielRoviraContreras/img/master/files/10.png",
       ],
     };
