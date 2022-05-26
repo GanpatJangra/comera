@@ -40,7 +40,9 @@
               <div class=" flex items-center justify-center bg-gray-300 rounded-md py-2 px-4 ">
                 <h1><svg class="h-10 w-10 text-blue-500 animate-spin "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5" />  <path d="M11 19.95a8 8 0 0 1 -5.3 -12.8" stroke-dasharray=".001 4.13" /></svg></h1>
                 <h1 class="font-semibold capitalize ml-4">
-                  please refresh this page api is sleping mode 💤💤
+                  please refresh this page api is sleping mode 💤💤 <br>
+                  because of free server
+
                 </h1>
               </div>
             </div>
