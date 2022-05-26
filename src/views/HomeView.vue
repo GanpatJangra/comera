@@ -35,6 +35,19 @@
                   </router-link>
 
           </div>
+          <button :class="{hidden}" onclick=" window.location.reload()" class="mx-auto">
+            <div>
+              <div class=" flex items-center justify-center bg-gray-300 rounded-md py-2 px-4 ">
+                <h1><svg class="h-10 w-10 text-blue-500 animate-spin "  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 4.55a8 8 0 0 1 6 14.9m0 -4.45v5h5" />  <path d="M11 19.95a8 8 0 0 1 -5.3 -12.8" stroke-dasharray=".001 4.13" /></svg></h1>
+                <h1 class="font-semibold capitalize ml-4">
+                  please refresh this page api is sleping mode 💤💤
+                </h1>
+              </div>
+            </div>
+
+          </button>
+
+
         </div>
       </div>
     </section>
@@ -47,6 +60,12 @@ import SliderBar from "../components/SliderBar.vue"
 
 export default {
   name: "ProductCom",
+data() {
+  return {
+    hidden:true,
+  }
+},
+
   components:{
 SliderBar
   },
@@ -64,9 +83,28 @@ SliderBar
   },
   computed: {
     products() {
-      // eslint-disable-next-line no-undef
-      return this.$store.state.products;
-    },
+
+if (this.$store.state.products.length == 0) {
+
+   this.hidden = false
+  // console.log(this.hidden);
+  
+} else {
+   this.hidden = true;
+   console.log(this.hidden);
+    //  console.log(this.$store.state.products.length);
+  return this.$store.state.products
+
+
+}
+
+      //  if (request.status == 404) {
+      //    return ("something when wrong")
+         
+      //  } else {
+      //    return this.$store.state.products
+      //  }
+      },
   },
 };
 </script>

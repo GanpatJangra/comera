@@ -151,9 +151,9 @@
                       >and <a class="text-gray-900" href="#">Cookies.</a>
                     </p>
                   </div>
-                   <button class="btn btn-primary" :disabled="status.registering">Register</button>
+                   <!-- <button class="btn btn-primary" :disabled="status.registering">Register</button> -->
                   <button
-                    @click.prevent="submitformnow()"
+                    @click="submitformnow()"
                     class="py-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-full transition duration-200">
                     Get started
                   </button>
@@ -196,17 +196,13 @@ export default {
     };
   },
 
-  methods: {
-    submitformnow() {
-      console.log(this.user);
-      // console.log(this.user);
-      // console.log(this.user.password);
-    },
+methods: {
+    async submitformnow(){
+       
+       await  this.$store.dispatch("savaUser", this.user);
+     }
+},
 
-  },
-  mounted() {
-    this.$store.dispatch("savaUser", this.user);
-  },
 
 
 };

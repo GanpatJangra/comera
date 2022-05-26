@@ -6,30 +6,27 @@ const url = "https://kindly-opposite-wishbone.glitch.me/products/";
 export default createStore({
 
   // state
-
-
   state: {
     products: [],
     cart: '0',
     product: null,
+    // loading: false,
     // checkout:null
   },
 
   // getters
-
-
   getters: {
-
   },
 
+
   // mutations
-
-
   mutations: {
+    // multiple products
     SET_PRODUCTS: (state, products) => {
       state.products = products;
     },
-    
+
+    // single product
     SET_PRODUCT: (state, product) => {
       state.product = product;
     },
@@ -53,27 +50,54 @@ export default createStore({
 
   actions: {
     getProducts: async ({ commit }) => {
-     await axios.get(url).then((response) => {
-        commit("SET_PRODUCTS", response.data);
-      });
+      try {
+        await axios.get(url).then((response) => {
+          commit("SET_PRODUCTS", response.data);
+        });
+
+      } catch (error) {
+        // console.log(error);
+         console.log("something went wrong")
+      }
+
     },
+
+
     getProduct: async ({ commit }, productId) => {
-    await  axios.get(`https://kindly-opposite-wishbone.glitch.me/products/${productId}`).then((response) => {
-        commit("SET_PRODUCT", response.data);
-      })
+      try {
+        await axios.get(`https://kindly-opposite-wishbone.glitch.me/products/${productId}`).then((response) => {
+          commit("SET_PRODUCT", response.data);
+        })
+        
+      } catch (error) {
+        console.log(error);
+        
+      }
     },
 
 
-    savaUser: async ({ commit }, register) => {
-    await  axios.post('https://kindly-opposite-wishbone.glitch.me/users/',{
-        register
-      }).then((response) => {
-        commit("SET_PRODUCT", response.data);
-      })
+    savaUser: async ({ commit }, user) => {
+      try {
+        console.log(user.name, user.email, user.password);
+        await axios.post('https://kindly-opposite-wishbone.glitch.me/users/', {
+          // user
+          name: user.name,
+          email: user.email,
+          password: user.password,
+        }).then((response) => {
+          response.data
+          console.log(response.data);
+          // console.log(response);
+        })
+        
+      } catch (error) {
+        console.log(error);
+        
+      }
     },
 
 
-  
+
 
 
 
