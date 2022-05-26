@@ -237,7 +237,7 @@
                   </p>
                 </div>
                 <div class="flex mb-2 justify-between items-center">
-                  <img class="h-[10rem]" :src="product.image" alt="" />
+                  <img class="h-24 md:h-[10rem]" :src="product.image" alt="" />
                   <span class="text-2xl font-bold font-heading text-white"
                     >{{ product.name }}
                   </span>

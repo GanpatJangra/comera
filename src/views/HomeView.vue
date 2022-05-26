@@ -19,7 +19,7 @@
                   {{ product.name }}
                 </h3>
                 <p class="text-lg font-bold text-blue-500 font-heading">
-                  <span>$29.89</span>
+                  <span>${{product.price}}</span>
                   <span class="text-xs font-semibold text-gray-500 line-through ml-2 font-heading">$33.69</span>
                 </p>
               </a>
